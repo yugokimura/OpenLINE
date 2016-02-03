@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>Open LINE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+	<section class="screen">
+
+		<div class="item">
+			<span class="name">TestA</span>
+			<p class="message">サンプルテキスト</p>
+			<div class="info">
+				<span class="text">既読:<span class="read">0</span></span>
+				<span class="time">00:00</span>
+			</div>
+		</div>
+
+		<div class="item">
+			<span class="name">TestA</span>
+			<p class="message">サンプルテキスト<br>サンプルテキスト<br>サンプルテキスト<br>サンプルテキスト</p>
+			<div class="info">
+				<span class="text">既読:<span class="read">0</span></span>
+				<span class="time">00:00</span>
+			</div>
+		</div>
+
+		<div class="item self">
+			<span class="name">TestB</span>
+			<p class="message">これはサンプルテキストサンプルテキスト</p>
+			<div class="info">
+				<span class="text">既読:<span class="read">0</span></span>
+				<span class="time">00:00</span>
+			</div>
+		</div>
+
+		<div class="item">
+			<span class="name">TestA</span>
+			<p class="message">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<div class="info">
+				<span class="text">既読:<span class="read">0</span></span>
+				<span class="time">00:00</span>
+			</div>
+		</div>
+
+		<div class="item self">
+			<span class="name">TestB</span>
+			<p class="message">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<div class="info">
+				<span class="text">既読:<span class="read">0</span></span>
+				<span class="time">00:00</span>
+			</div>
+		</div>
+
+		<div class="space"></div>
+	</section>
+	
+	<section class="controll">
+
+		<div class="input">
+			<form method="post" action="">
+				<button class="bt bt-button" type="button"><i class="icon">add</i></button>
+				<button class="bt bt-button" type="button"><i class="icon">face</i></button>
+				<textarea type="text" id="message" /></textarea>
+				<button class="bt bt-submit" type="submit"><i class="icon">mic</i></button>
+			</form>
+		</div>
+
+	</section>
+
+	<!-- 非表示セクション -->
+	<section class="hidden">
+	
+		<form method="post" action="/upload" target="uploadFrame" enctype="multipart/form-data">
+			<input type="file" id="file" name="file" accept="video/*, image/*" capture="camcorder, camera" />
+		</form>
+		<iframe id="uploadFrame" name="uploadFrame"></iframe>
+	</section>
+</body>
+</html>
